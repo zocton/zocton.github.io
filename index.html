@@ -14,33 +14,169 @@
 		}
 
 		.nav-style {
-			background-color: #44475a;
+			background-color: #bd93f9;
 			color: #f8f8f2;
-			height: 50px;
 			text-align: center;
+			height: 70px;
+		}
+
+		.accordion-button {
+			background-color: #282a36;
+			color: #f8f8f2;
+		}
+
+		.accordion-button:not(.collapsed) {
+		  color: #8be9fd;
+		  background-color: #44475a;
+		  box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+		}
+
+		.accordion-body {
+			background-color: #282a36;
+		}
+
+		.accordion-item {
+		  background-color: #fff;
+		  border: 1px solid rgb(139,233,253);
+		}
+
+		a { 
+			color: inherit;
+			text-decoration: none;
+		}
+		a:hover { color: #ff79c6; }
+
+		.nav-tabs .nav-link.active {
+		  color: #f8f8f2;
+		  background-color: #44475a;
+		  border-color: #dee2e6 #dee2e6 #ff79c6;
+		}
+
+		.nav-tabs .nav-link {
+		  margin-bottom: -1px;
+		  background: 0 0;
+		  border: 1px solid transparent;
+		  border-top-left-radius: .25rem;
+		  border-top-right-radius: .25rem;
+		}
+
+		.nav-link {
+		  display: block;
+		  padding: .5rem 1rem;
+		  color: #282a36;
+		  text-decoration: none;
+		  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+		}
+
+		.btn-primary {
+		  color: #f8f8f2;
+		  background-color: #6272a4;
+		  border-color: #8be9fd;
+		}
+
+		.btn-primary:hover {
+		  color: #ff79c6;
+		  background-color: #8be9fd;
+		  border-color: #8be9fd;
 		}
 </style>
 <body class="page-style">
-	<div class="nav-fluid">
-		<div class="row nav-style justify-content-center align-items-center">
-			<div class="col-sm-4"><div class="p-1 "><button type="button" class="btn btn-primary" id="liveToastBtn">Home</button></div></div>
-			<div class="col-sm-4"><div class="p-1">Projects</div></div>
-			<div class="col-sm-4"><div class="p-1">About</div></div>
+
+	<!-- Navigation contents -->
+	<div class="nav nav-style justify-content-end">
+		<ul class="nav nav-tabs justify-content-end align-items-end">
+		  <li class="nav-item">
+		    <a class="nav-link active" aria-current="page" href="#">Home</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link disabled">Links</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link disabled">About</a>
+		  </li>
+		</ul>
+	</div>
+
+	<!-- Main page contents -->
+	<div class="container page-style">
+		<h3 class="mt-4 mb-4">
+		  Projects
+		  <small class="text-muted">and contributions</small>
+		</h3>
+		<div class="accordion" id="projectsAccordion">
+		  <div class="accordion-item">
+		    <h2 class="accordion-header" id="headingOne">
+		      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		        Bacon Man (ベーコンマン)
+		      </button>
+		    </h2>
+		    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#projectsAccordion">
+		      <div class="accordion-body">
+		      	<div class="d-flex justify-content-center"><img src=".\img\bman.jpg" class="img-fluid rounded"></div>
+		        <p class="p-1 mt-3"><strong>Bacon Man!</strong> Your claim to the throne is in jeopardy! Expert platforming skills and sheer arrogance are essential for your adventure. Prove your innocence by destroying all who oppose you.</p>
+
+		        <div class="p-1"><button type="button" class="btn btn-primary" name="liveToastBtn"><a href="https://store.steampowered.com/app/327760/Bacon_Man_An_Adventure/" target="_new" rel="noopener noreferrer">View on Steam</a></button></div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="accordion-item">
+		    <h2 class="accordion-header" id="headingTwo">
+		      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		        Chex Quest HD
+		      </button>
+		    </h2>
+		    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#projectsAccordion">
+		      <div class="accordion-body">
+		      	<div class="d-flex justify-content-center"><img src=".\img\chexq.jpg" class="img-fluid rounded"></div>
+		        <p class="p-1 mt-3">Travel to the remote planet of Bazoik to free galactic citizens from the evil cereal-eating Flemoids! Venture deep into the caverns of Bazoik, using an array of "zorching" devices to send these nefarious foes back to their home dimension! Southern New Hampshire University students collaborated on this project.</p>
+
+		        <div class="p-1"><button type="button" class="btn btn-primary" name="liveToastBtn"><a href="https://store.steampowered.com/app/804270/Chex_Quest_HD/" target="_new" rel="noopener noreferrer">View on Steam</a></button></div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="accordion-item">
+		    <h2 class="accordion-header" id="headingThree">
+		      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		        Car Crash Couch Party
+		      </button>
+		    </h2>
+		    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#projectsAccordion">
+		      <div class="accordion-body">
+		      	<div class="d-flex justify-content-center"><img src=".\img\cccp.jpg" class="img-fluid rounded"></div>
+		        <p class="p-1 mt-3"><strong>Car Crash Couch Party</strong> is a local multiplayer party game! This was developed as a student project and demoed at the Bank of NH Pavilion.</p>
+
+		        <div class="p-1"><button type="button" class="btn btn-primary" name="liveToastBtn"><a href="https://store.steampowered.com/app/780120/Car_Crash_Couch_Party/" target="_new" rel="noopener noreferrer">View on Steam</a></button></div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="accordion-item">
+		    <h2 class="accordion-header" id="headingFour">
+		      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+		        Process Reconfiguration Optimization Simulator (PROS)
+		      </button>
+		    </h2>
+		    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#projectsAccordion">
+		      <div class="accordion-body">
+		      	<div class="d-flex justify-content-center"><img src=".\img\pros.jpg" class="img-fluid rounded"></div>
+		        <p class="p-1 mt-3">G.E. Brilliant Hacks - Second Prize and Popular Choice Winner. </p>
+
+		        <div class="p-1"><button type="button" class="btn btn-primary" name="liveToastBtn"><a href="https://devpost.com/software/pros-4zwd5n" target="_new" rel="noopener noreferrer">View on Devpost</a></button></div>
+		      </div>
+		    </div>
+		  </div>
 		</div>
 	</div>
-	<div class="page-content">
-		<div class=""></div>
-	</div>
+
+	<!-- Toast Settings -->
 	<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
 	  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
 	    <div class="toast-header">
-	      <img src="..." class="rounded me-2" alt="...">
-	      <strong class="me-auto">Notification</strong>
+	      <strong class="me-auto">💬 Notification</strong>
 	      <small>A moment ago</small>
 	      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
 	    </div>
 	    <div class="toast-body" style="color: black;">
-	      More coming soon!
+	    	Thanks for checking out one of my projects! The link should be opened in a new tab.
 	    </div>
 	  </div>
 	</div>
@@ -48,10 +184,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-	var toastTrigger = document.getElementById('liveToastBtn')
+	var toastTriggers = document.getElementsByName('liveToastBtn')
 	var toastLive = document.getElementById('liveToast')
-	if (toastTrigger) {
-	  toastTrigger.addEventListener('click', function () {
+
+	for (let button of toastTriggers)	{
+		button.addEventListener('click', function () {
 	    var toast = new bootstrap.Toast(toastLive)
 
 	    toast.show()
